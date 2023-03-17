@@ -1,4 +1,3 @@
-// import { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ContactForm.module.css';
 export const ContactForm = ({ onHandleSubmit }) => {
@@ -14,10 +13,6 @@ export const ContactForm = ({ onHandleSubmit }) => {
     return;
   };
   const clearForm = e => {
-    // this.setState({
-    //   name: '',
-    //   number: '',
-    // });
     e.target.elements.name.value = '';
     e.target.elements.number.value = '';
   };
@@ -47,8 +42,7 @@ export const ContactForm = ({ onHandleSubmit }) => {
       <label className={styles.inputBlock}>
         Number
         <input
-          onChange={this.onChangingInput}
-          // value={this.state.number}
+          onChange={onChangingInput}
           className={styles.input}
           type="tel"
           name="number"
